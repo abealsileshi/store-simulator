@@ -1,76 +1,60 @@
 package fgls;
+import java.util.*;
 
-public class Game {
-    private int price;
-    private int height;
-    private int width;
-    private int length;
-    private int count = 3;
+public class Game implements Utility{
+    String name;
+    public int price;
+    public int height;
+    public int width;
+    public int length;
+    public int count = 3;
     public int shelfPos;
 
-    public Game(int p, int h, int w, int len){
-        this.price = p;
-        this.height = h;
-        this.width =  w;
-        this.length = len;
+    public Game(String name){
+        this.name = name;
     }
-    public void incrCount(){
-        count = count +1;
-    }
-    public void decrCount(){
-        count = count - 1;
-    }
-
 }
 
+//Monopoly, Clue, Life
 class Family extends Game{
-    super();
+    public Family(String name){
+        super(name);
+        this.price = Utility.rndFromRange(5,100);
+        this.height = Utility.rndFromRange(3,10);
+        this.width =  Utility.rndFromRange(3,10);
+        this.length = Utility.rndFromRange(3,10);
+    }
 }
+
+//Mousetrap, Candyland, Connect Four
 class Kids extends Game{
-    super();
+    public Kids(String name){
+        super(name);
+        this.price = Utility.rndFromRange(5,100);
+        this.height = Utility.rndFromRange(3,10);
+        this.width =  Utility.rndFromRange(3,10);
+        this.length = Utility.rndFromRange(3,10);
+    }
 }
+
+//Magic, Pokémon, Netrunner
 class Card extends Game{
-    super();
+    public Card(String name){
+        super(name);
+        this.price = Utility.rndFromRange(5,100);
+        this.height = Utility.rndFromRange(3,10);
+        this.width =  Utility.rndFromRange(3,10);
+        this.length = Utility.rndFromRange(3,10);
+    }
 }
+
+//Catan, Risk, Gloomhaven
 class Board extends Game{
-    super();
-}
-class Monopoly extends Family{
-    super();
-}
-class Clue extends Family{
-    super();
-}
-class Life extends Family{
-    super();
-}
-class Mousetrap extends Kids{
-    super();
-}
-class Candyland extends Kids{
-    super();
-}
-class ConnectFour extends Kids{
-    super();
-}
-class Magic extends Card{
-    super();
-}
-class Pokemon extends Card{
-    super();
-}
-class Netrunner extends Card{
-    super();
-}
-class Netrunner extends Card{
-    super();
-}
-class Catan extends Board{
-    super();
-}
-class Risk extends Board{
-    super();
-}
-class Gloomhaven extends Board{
-    super();
+    public Board(String name){
+        super(name);
+        this.price = Utility.rndFromRange(5,100);
+        this.height = Utility.rndFromRange(3,10);
+        this.width =  Utility.rndFromRange(3,10);
+        this.length = Utility.rndFromRange(3,10);
+    }
 }

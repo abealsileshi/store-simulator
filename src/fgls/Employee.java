@@ -2,7 +2,6 @@ package fgls;
 import java.lang.*;
 
 public abstract class Employee {
-    Store store = new Store();
     public String name;
     public Employee(String name){
         this.name = name;
@@ -18,9 +17,9 @@ public abstract class Employee {
 
 }
 
-class Bart extends Employee{
+class Cashier extends Employee{
     int day = 0;
-    public Bart(String name){
+    public Cashier(String name){
         super(name);
     }
 
