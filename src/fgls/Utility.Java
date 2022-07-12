@@ -2,6 +2,7 @@
 package fgls;
 
 import java.text.NumberFormat;
+import java.util.Comparator;
 
 public interface Utility {
 
@@ -11,6 +12,8 @@ public interface Utility {
         //returns a uniform inclusive random number from a given min and max range
         return (int) ((Math.random() * ((max+1) - min)) + min);
     }
+
+
 
     // another utility for printing out pretty $ values
     // https://stackoverflow.com/questions/13791409/java-format-double-value-as-dollar-amount

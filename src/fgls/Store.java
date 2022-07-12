@@ -18,6 +18,7 @@ public class Store {
 
     //This is to initialize the shelf with games
     public void initShelf(){
+        System.out.println("initShelf running....");
         shelf.add(new Family("Monopoly"));
         shelf.add(new Family("Clue"));
         shelf.add(new Family("Life"));
@@ -31,8 +32,25 @@ public class Store {
         shelf.add(new Family("Risk"));
         shelf.add(new Family("Gloomhaven"));
     }
+//Ernie - shortest to tallest height
+//Ernie - widest games to most narrow
 
-    public void stackByWidth(){
+
+    public void stackByWidth(Employee e){
+        if(e.name != "Ernie"){
+            System.out.println("THIS PERSON DOESN'T STACK BY WIDTH");
+            return;
+        }
+        ArrayList<Game> temp = new ArrayList<Game>();
+        //Bubble sort below
+//        boolean sorted = false;
+//        while(!sorted) {
+//
+//        }
+
+        Collections.sort(shelf, new Stack());
+
+//        System.out.println(Arrays.asList(books));
         for(Game obj: shelf){
             System.out.println(obj.name);
         }
